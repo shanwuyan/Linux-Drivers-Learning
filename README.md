@@ -11,7 +11,7 @@ To record the code written by me during the learning process/记录Linux驱动�
     &emsp;&emsp;实现了自动创建设备节点、由系统分配设备号、和用户程序交换数据。
 <br/><br/>
 Linux驱动之设备树的基础知识<br/>
-    &emsp;&emsp;这一部分没有代码
+    &emsp;&emsp;这一部分没有代码。
 <br/><br/>
 Linux驱动之GPIO子系统和pinctrl子系统<br/>
     &emsp;&emsp;这部分通过设备树pinctrl子系统以及GPIO子系统，实现了用户程序对GPIO的控制。用户程序可以控制两个LED灯的亮和灭。
