@@ -45,7 +45,7 @@
 
 		led3 {
 			label = "red:user";
-			gpios = <&gpk1 1 GPIO_ACTIVE_HIGH>;
+		//	gpios = <&gpk1 1 GPIO_ACTIVE_HIGH>;
 			default-state = "off";
 		};
 	};
@@ -56,7 +56,7 @@
 		home {
 			label = "GPIO Key Home";
 			linux,code = <KEY_HOME>;
-			//gpios = <&gpx1 1 GPIO_ACTIVE_LOW>;	//modified by shanwuyan
+			gpios = <&gpx1 1 GPIO_ACTIVE_LOW>;	//modified by shanwuyan
 		};
 
 		back {
@@ -211,26 +211,7 @@
 		led-gpios = <&gpl2 0 GPIO_ACTIVE_HIGH>,<&gpk1 1 GPIO_ACTIVE_HIGH>;
 		status = "okay";
 	};
-
-	/*gpiobeep by shanwuyan*/
-	gpiobeep{
-		compatible = "samsung,gpiobeep";
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_beep>;
-		beep-gpios = <&gpd0 0 GPIO_ACTIVE_HIGH>;
-		status = "okay";
-	};
-	/*gpiokey by shanwuyan*/
-	gpiokey{
-		compatible = "samsung,gpiokey";
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_gpiokey>;
-		key-gpios = <&gpx1 1 GPIO_ACTIVE_LOW>;
-		status = "okay";
-
-		interrupt-parent = <&gpx1>;
-		interrupts = <1 0>;
-	};
+	
 };
 
 &adc {

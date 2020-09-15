@@ -432,14 +432,6 @@
 			samsung,pin-pud = <EXYNOS_PIN_PULL_DOWN>;
 			samsung,pin-drv = <EXYNOS4_PIN_DRV_LV1>;
 		};
-		
-		/*modified by shanwuyan*/
-		pinctrl_beep: beepgrp {
-				samsung,pins = "gpd0-0" ;
-				samsung,pin-function = <1>;
-				samsung,pin-val = <1>;
-				samsung,pin-pud = <EXYNOS_PIN_PULL_UP>;
-		};
 	};
 
 	pinctrl_1: pinctrl@11000000 {
@@ -912,12 +904,6 @@
 				samsung,pin-function = <EXYNOS_PIN_FUNC_OUTPUT>;	//设置为输出
 				samsung,pin-val = <1>;	//默认输出为低电平
 				samsung,pin-pud = <EXYNOS_PIN_PULL_UP>;	//设置为上拉
-		};
-		/*modified by shanwuyan*/
-		pinctrl_gpiokey: keygrp {
-				samsung,pins = "gpx1-1" ;
-				samsung,pin-function = <0>;	//EXYNOS_PIN_FUNC_INPUT
-				samsung,pin-pud = <EXYNOS_PIN_PULL_NONE>;
 		};
 	};
 
